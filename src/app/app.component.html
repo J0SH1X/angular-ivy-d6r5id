@@ -1,0 +1,27 @@
+<h1 align="center">Tic Tac Toe</h1>
+<p
+  *ngIf="field != 0 || (field < 10 && playerType != 'Computer')"
+  class="red"
+  align="center"
+>
+  PLEASE SELECT A FIELD
+</p>
+
+<div class="grid">
+  <div id="0" (click)="selectfield(0)">{{ boardField[0].boardField }}</div>
+  <div id="1" (click)="selectfield(1)">{{ boardField[1].boardField }}</div>
+  <div id="2" (click)="selectfield(2)">{{ boardField[2].boardField }}</div>
+  <div id="3" (click)="selectfield(3)">{{ boardField[3].boardField }}</div>
+  <div id="4" (click)="selectfield(4)">{{ boardField[4].boardField }}</div>
+  <div id="5" (click)="selectfield(5)">{{ boardField[5].boardField }}</div>
+  <div id="6" (click)="selectfield(6)">{{ boardField[6].boardField }}</div>
+  <div id="7" (click)="selectfield(7)">{{ boardField[7].boardField }}</div>
+  <div id="8" (click)="selectfield(8)">{{ boardField[8].boardField }}</div>
+</div>
+<div>
+  <p></p>
+</div>
+<div *ngIf="!playersymbol && field">
+  <button (click)="setSymbol('O')">O</button>
+  <button (click)="setSymbol('X')">X</button>
+</div>
